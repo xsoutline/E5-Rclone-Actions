@@ -8,6 +8,15 @@ on:
     - cron: 30 1,13 * * *
   watch:
     types: started
+  # 手动触发事件
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test 手动触发事件 tags'
 jobs:
   run-it:
     runs-on: ubuntu-latest
