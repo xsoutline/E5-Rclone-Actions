@@ -69,7 +69,8 @@ jobs:
           echo $time > E5-Rclone-Actions/$dir/$time.txt
           echo $time > E5-Rclone-Actions/$dir/$time.txt.2
 
-          # 开始上传文件完毕
+          # 开始上传文件
+          echo "开始上传文件"
           rclone copy E5-Rclone-Actions e5:E5-Rclone-Actions
           echo "上传文件完毕"
           rclone delete e5:E5-Rclone-Actions/$dir/$time.txt.2
