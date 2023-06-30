@@ -58,6 +58,7 @@ jobs:
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
           # 列出文件(此处不展示)
+          cat ~/.config/rclone/rclone.conf
           echo "列出文件(此处不展示)"
           rclone lsf e5: > "rclone lsf.log"
           rclone ls e5: > "rclone ls.log"
