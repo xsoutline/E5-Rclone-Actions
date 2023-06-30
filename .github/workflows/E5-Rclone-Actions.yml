@@ -52,7 +52,7 @@ jobs:
           }
 
           # 随机延迟0~15分钟后再进行操作,可自行设置时间
-          delay 15
+          delay 1
 
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
@@ -69,6 +69,7 @@ jobs:
           echo $time > E5-Rclone-Actions/$dir/$time.txt
           echo $time > E5-Rclone-Actions/$dir/$time.txt.2
 
+          # 开始上传文件完毕
           rclone copy E5-Rclone-Actions e5:E5-Rclone-Actions
           echo "上传文件完毕"
           rclone delete e5:E5-Rclone-Actions/$dir/$time.txt.2
